@@ -23,6 +23,14 @@
                     I am the target element! <br>I change after you click a button (event), made with JavaScript
                 </div>
             </section>
+            <section class="jsTransition-classes">
+                <p>
+                    <button class="newtrigger">Click this button - it's an event!</button>
+                </p>
+                <div class="newtarget">
+                    I am the target element! <br>I change after you click a button (event), made with JavaScript
+                </div>
+            </section>
 
         </main>
 
@@ -30,11 +38,19 @@
         /*JavaScript*/
             const trigger = document.querySelector('.trigger');
             const target = document.querySelector('.target');
+            const newtrigger = document.querySelector('.newtrigger');
+            const newtarget = document.querySelector('.newtarget');
+
 
             trigger.addEventListener('click', changeTarget);
+            newtrigger.addEventListener('click', changeNewTarget);
 
             function changeTarget() {
                 target.classList.toggle('active-target');
+            }
+
+            function changeNewTarget() {
+                newtarget.classList.toggle('active-newtarget');
             }
         </script>
     </body>
